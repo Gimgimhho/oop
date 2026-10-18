@@ -1,10 +1,32 @@
-﻿internal class Program
+﻿using System;
+namespace HW2
 {
-    
-    private static void Main(string[] args)
+    public class Person
     {
-        MyDate md1 = new MyDate(DateTime.Now.Day,DateTime.Now.Month, DateTime.Now.Year);
-        Console.WriteLine("{0}/{1}/{2}",md1.Day,md1.Month,md1.Year);
-        Console.ReadKey();
+        private string name;
+        private string address;
+        private double salary;
+        public Person(){}
+        public Person(string name, string address, double salary)
+        {
+            this.name = name;
+            this.address = address;
+            this.salary = salary;
+        }
+        public string Name 
+        {
+            get => name;
+            set => name = value;
+        }
+        public string Address
+        {
+            get => address;
+            set => address = value;
+        }
+        public double Salary
+        {
+            get => salary;
+            set => salary = value; 
+        }
     }
 }
